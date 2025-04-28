@@ -2,10 +2,11 @@ namespace agalloS2A.NewFolder;
 
 public partial class vElementos : ContentPage
 {
-	public vElementos()
+	public vElementos(string nombreUsuario)
 	{
 		InitializeComponent();
-	}
+        lblUsuario.Text = $"Bienvenido, {nombreUsuario}";
+    }
 
     private void btnPaises_Clicked(object sender, EventArgs e)
     {
@@ -31,5 +32,14 @@ public partial class vElementos : ContentPage
     {
         string fecha = dpkFecha.Date.ToString();
         DisplayAlert("Mensaje", " La fecha es: " + fecha, "Cerrar");
+    }
+
+    private void btnCerrarSesion_Clicked(object sender, EventArgs e)
+    {
+        var mainWindow = Application.Current?.Windows.FirstOrDefault();
+        if (mainWindow is not null)
+        {
+            mainWindow.Page = new NavigationPage(new NewFolder.vLogin());
+        }
     }
 }

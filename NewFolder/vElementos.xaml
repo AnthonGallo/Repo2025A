@@ -6,10 +6,17 @@
     <VerticalStackLayout
         Padding="20"
         Spacing="20">
+
+        <Label x:Name="lblUsuario"
+            FontSize="20"
+            TextColor="White"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"/>
+        
         <Label 
             Text="SEMANA 2 - Elementos GUI"
             FontSize="18"
-            TextColor="Purple"
+            TextColor="Fuchsia"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
@@ -23,14 +30,22 @@
         </Picker>
 
         <Button x:Name="btnPaises"
-                Text="Ver países"
+                Background="SeaGreen"
+                Text="Ver país"
+                TextColor="White"
                 Clicked="btnPaises_Clicked"/>
 
         <DatePicker x:Name="dpkFecha" Format="MM/dd/yyyy"
-                    TextColor="BlueViolet"/>
+                    TextColor="SkyBlue"/>
 
         <Button x:Name="btnFecha"
                 Text="Ver fecha"
+                TextColor="White"
                 Clicked="btnFecha_Clicked"/>
+
+        <Button x:Name="btnCerrarSesion"
+                Background="SkyBlue"
+                Text="Cerrar Sesión"
+                Clicked="btnCerrarSesion_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
